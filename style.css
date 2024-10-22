@@ -185,53 +185,54 @@ footer {
   }
 }
 
-/* Carousel Container */
 .carousel {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
+    position: relative;
+    max-width: 100%;
+    margin: auto;
 }
 
-/* Hide all images by default */
 .carousel-images img {
-  display: none;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none; /* Hide all images by default */
+    width: 100%; /* Make images responsive */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Show the active image */
 .carousel-images img.active {
-  display: block;
+    display: block; /* Show the active image */
 }
 
-/* Navigation Controls (previous/next buttons) */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
 }
 
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 0; /* Position next button on the right */
 }
 
 .prev {
-  left: 0;
+    left: 0; /* Position previous button on the left */
 }
 
 /* On hover, change background color of buttons */
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Adjust button size on mobile */
+@media (max-width: 768px) {
+    .prev, .next {
+        padding: 10px; /* Smaller padding for mobile */
+        font-size: 16px; /* Smaller font size */
+    }
 }
