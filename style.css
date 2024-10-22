@@ -67,6 +67,21 @@ header {
   color: #ffcc00;  /* Text color change on hover */
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
 /* Social media links */
 .social-links {
   display: flex;
@@ -84,40 +99,22 @@ header {
   transform: scale(1.2);  /* Slight zoom on hover */
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  cursor: pointer;
-  z-index: 10; /* Ensure it appears above other elements */
+/* Footer social links */
+.footer-social-links {
+  display: none; /* Hide by default */
+  justify-content: center;
+  margin-top: 10px; /* Space above social links */
 }
 
-.hamburger span {
-  height: 4px;
-  width: 25px;
-  background: white; /* Change to match your navbar color */
-  margin: 3px 0; /* Space between lines */
+.footer-social-links a img {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  transition: transform 0.2s ease;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Hide nav links by default */
-    flex-direction: column; /* Stack them vertically */
-    position: absolute;
-    top: 60px; /* Adjust based on your navbar height */
-    right: 0;
-    background: #333; /* Change as per your design */
-    width: 100%; /* Full width */
-  }
-
-  .nav-links.active {
-    display: flex; /* Show when active */
-  }
-
-  .hamburger {
-    display: flex; /* Show hamburger menu */
-  }
+.footer-social-links a img:hover {
+  transform: scale(1.2);  /* Slight zoom on hover */
 }
 
 /* Main section */
@@ -238,4 +235,33 @@ footer {
 /* On hover, change background color of buttons */
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column; /* Stack them vertically */
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    right: 0;
+    background: #333; /* Change as per your design */
+    width: 100%; /* Full width */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when active */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu */
+  }
+
+  .social-links {
+    display: none; /* Hide social links in navbar on mobile */
+  }
+
+  .footer-social-links {
+    display: flex; /* Show social links in footer on mobile */
+  }
 }
