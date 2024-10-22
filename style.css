@@ -43,30 +43,6 @@ header {
   color: white;
 }
 
-/* Navigation links styling */
-.nav-links {
-  list-style: none;
-  display: flex;    /* Arrange links in a row */
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin: 0 15px;   /* Space between links */
-}
-
-.nav-links a {
-  text-decoration: none;  /* Remove underline */
-  color: white;
-  font-size: 18px;
-  padding: 5px 10px;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ffcc00;  /* Text color change on hover */
-}
-
 /* Hamburger Menu */
 .hamburger {
   display: none; /* Hidden by default */
@@ -80,6 +56,30 @@ header {
   background-color: white;
   margin: 5px;
   transition: all 0.3s ease;
+}
+
+/* Navigation links styling */
+.nav-links {
+  list-style: none;
+  display: flex; /* Arrange links in a row */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00; /* Text color change on hover */
 }
 
 /* Social media links */
@@ -96,30 +96,12 @@ header {
 }
 
 .social-links a img:hover {
-  transform: scale(1.2);  /* Slight zoom on hover */
-}
-
-/* Footer social links */
-.footer-social-links {
-  display: none; /* Hide by default */
-  justify-content: center;
-  margin-top: 10px; /* Space above social links */
-}
-
-.footer-social-links a img {
-  width: 30px;
-  height: 30px;
-  margin-left: 15px;
-  transition: transform 0.2s ease;
-}
-
-.footer-social-links a img:hover {
-  transform: scale(1.2);  /* Slight zoom on hover */
+  transform: scale(1.2); /* Slight zoom on hover */
 }
 
 /* Main section */
 main {
-  margin-top: 100px;     /* Prevent content from hiding behind sticky header */
+  margin-top: 100px; /* Prevent content from hiding behind sticky header */
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -130,7 +112,7 @@ main {
 #about-me, #work-experience, #education, #contact {
   margin: 20px auto;
   padding: 20px;
-  background-color: white;   /* Ensure background is consistent */
+  background-color: white; /* Ensure background is consistent */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
@@ -186,6 +168,37 @@ footer {
   bottom: 0;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger menu on mobile */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column; /* Stack them vertically */
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    right: 0;
+    background: #333; /* Change as per your design */
+    width: 100%; /* Full width */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when active */
+  }
+
+  .social-links {
+    display: none; /* Hide social links in navbar on mobile */
+  }
+
+  .footer-social-links {
+    display: flex; /* Show social links in footer on mobile */
+    justify-content: center; /* Center the social icons */
+    padding: 10px 0; /* Add padding to the footer */
+  }
+}
+
 /* Carousel Container */
 .carousel {
   position: relative;
@@ -235,33 +248,4 @@ footer {
 /* On hover, change background color of buttons */
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Hide nav links by default */
-    flex-direction: column; /* Stack them vertically */
-    position: absolute;
-    top: 60px; /* Adjust based on your navbar height */
-    right: 0;
-    background: #333; /* Change as per your design */
-    width: 100%; /* Full width */
-  }
-
-  .nav-links.active {
-    display: flex; /* Show when active */
-  }
-
-  .hamburger {
-    display: flex; /* Show hamburger menu */
-  }
-
-  .social-links {
-    display: none; /* Hide social links in navbar on mobile */
-  }
-
-  .footer-social-links {
-    display: flex; /* Show social links in footer on mobile */
-  }
 }
