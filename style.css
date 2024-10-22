@@ -6,8 +6,8 @@ html, body {
   font-family: "Inconsolata", monospace;
   background: url('assets/giphy.gif') no-repeat center center fixed;
   background-size: cover;
-  backdrop-filter: blur(
-
+  backdrop-filter: blur(1px);
+}
 
 body {
   display: block;
@@ -89,7 +89,7 @@ header {
 }
 
 .social-links a img {
-  width: 30px;
+  width: 30px; /* Set a standard size for icons */
   height: 30px;
   margin-left: 15px;
   transition: transform 0.2s ease;
@@ -109,7 +109,7 @@ main {
 }
 
 /* About Me, Work Experience, Education */
-#about-me, #work-experience, #education, #contact {
+#about-me, #work-experience, #education {
   margin: 20px auto;
   padding: 20px;
   background-color: white; /* Ensure background is consistent */
@@ -119,7 +119,7 @@ main {
   text-align: left;
 }
 
-#about-me h2, #work-experience h2, #education h2, #contact h2 {
+#about-me h2, #work-experience h2, #education h2 {
   margin-bottom: 15px;
 }
 
@@ -135,27 +135,6 @@ main {
 .experience p, .education-entry p {
   margin: 5px 0;
   color: #666;
-}
-
-/* Projects Section */
-.project {
-  background-color: white;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.project h3 {
-  margin-bottom: 10px;
-}
-
-.project-screenshot {
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer Styling */
@@ -196,6 +175,13 @@ footer {
     display: flex; /* Show social links in footer on mobile */
     justify-content: center; /* Center the social icons */
     padding: 10px 0; /* Add padding to the footer */
+  }
+
+  /* Adjust size of social media icons in footer */
+  .footer-social-links a img {
+    width: 25px; /* Reduced size for mobile */
+    height: 25px; /* Maintain aspect ratio */
+    margin-left: 10px; /* Adjust spacing */
   }
 }
 
