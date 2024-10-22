@@ -6,8 +6,8 @@ html, body {
   font-family: "Inconsolata", monospace;
   background: url('assets/giphy.gif') no-repeat center center fixed;
   background-size: cover;
-  backdrop-filter: blur(1px);
-}
+  backdrop-filter: blur(
+
 
 body {
   display: block;
