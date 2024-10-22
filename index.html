@@ -14,18 +14,19 @@
             <h1>José de Barros</h1>
         </div>
         
+        <!-- Hamburger menu -->
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        
+
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Homepage</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-
+        
         <div class="social-links">
             <a href="https://www.instagram.com/jossyboii/" target="_blank">
                 <img src="assets/instagram-icon.png" alt="Instagram">
@@ -41,15 +42,14 @@
             </a>
         </div>
     </nav>
-    
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
 </header>
 
     <main>
