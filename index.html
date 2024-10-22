@@ -8,27 +8,26 @@
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
-<header>
-<nav class="navbar">
-    <div class="logo">
-        <h1>José de Barros</h1>
-    </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>José de Barros</h1>
+            </div>
 
-    <!-- Hamburger menu -->
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+            <!-- Hamburger menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Homepage</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-        
         <div class="social-links">
             <a href="https://www.instagram.com/jossyboii/" target="_blank">
                 <img src="assets/instagram-icon.png" alt="Instagram">
@@ -43,16 +42,7 @@
                 <img src="assets/github-icon.png" alt="Github">
             </a>
         </div>
-    </nav>
-    <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active'); // Toggle the 'active' class
-    });
-</script>
-</header>
+    </header>
 
     <main>
         <!-- About Me Section -->
@@ -120,54 +110,28 @@
                 <p>2021 | La Ligue de l'enseignement</p>
             </div>
         </section>
-<footer>
-    <p>© 2024 Jossyboiii All rights reserved.</p>
-    <div class="footer-social-links">
-        <a href="https://www.instagram.com/jossyboii/" target="_blank">
-            <img src="assets/instagram-icon.png" alt="Instagram">
-        </a>
-        <a href="https://www.youtube.com/@jossyboiii" target="_blank">
-            <img src="assets/youtube-icon.png" alt="YouTube">
-        </a>
-        <a href="https://open.spotify.com/user/bloodshell06?si=485696e425ba4a00" target="_blank">
-            <img src="assets/spotify-icon.png" alt="Spotify">
-        </a>
-        <a href="https://github.com/Jossyboiii/" target="_blank">
-            <img src="assets/github-icon.png" alt="Github">
-        </a>
-    </div>
-</footer>
-            <!-- JavaScript Integration -->
+    </main>
+
+    <footer>
+        <p>© 2024 Jossyboiii All rights reserved.</p>
+        <div class="footer-social-links">
+            <a href="https://www.instagram.com/jossyboii/" target="_blank">
+                <img src="assets/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/@jossyboiii" target="_blank">
+                <img src="assets/youtube-icon.png" alt="YouTube">
+            </a>
+            <a href="https://open.spotify.com/user/bloodshell06?si=485696e425ba4a00" target="_blank">
+                <img src="assets/spotify-icon.png" alt="Spotify">
+            </a>
+            <a href="https://github.com/Jossyboiii/" target="_blank">
+                <img src="assets/github-icon.png" alt="Github">
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript Integration -->
     <script>
-        // JavaScript for Carousel
-        let slideIndex = 0;
-        showSlides(slideIndex);
-
-        function moveSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function showSlides(n) {
-            let slides = document.querySelectorAll('.carousel-images img');
-            
-            if (n >= slides.length) { 
-                slideIndex = 0;
-            }
-            
-            if (n < 0) {
-                slideIndex = slides.length - 1;
-            }
-            
-            // Hide all images
-            slides.forEach((slide) => {
-                slide.classList.remove('active');
-            });
-
-            // Show the current image
-            slides[slideIndex].classList.add('active');
-        }
-
-        // Hamburger Menu Functionality
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
 
